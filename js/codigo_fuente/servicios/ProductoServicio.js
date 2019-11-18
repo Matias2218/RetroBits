@@ -5,10 +5,13 @@ const productos = [new Producto(1, 'Super Nintendo', 'Consola', 'Consola Super N
                    new Producto(3, 'Super Mario World', 'VideoJuego Retro', 'Primer videojuego creado para acompañar el estreno de Super Nintendo Entertainment System para Japón, Europa y América del Norte.', 28000, 'img/SNES-Super-Mario-World.jpg')];
 
 document.addEventListener('DOMContentLoaded', () => {
-   cargarProductos();
+    let body = document.getElementsByTagName("body")[0];
+
+    productos.forEach((producto)=>
+    {
+        body.append(producto.nombre);
+    });
 });
 
-function cargarProductos() {
-    console.log(productos);
-}
+
 

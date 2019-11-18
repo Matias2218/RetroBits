@@ -2,18 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Pagina principal</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pagina principal</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/push.min.js">
+    </script>
+    <script type="module" src="js/codigo_fuente/servicios/UsuarioServicio.js">
+    </script>
 </head>
 
 <body>
@@ -21,144 +25,171 @@
   <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5">
     <a class="navbar-brand pl-2" href="#"><img src=" img/logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="basicExampleNav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
-          <a class="nav-link" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="productos.html">Productos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Galeria</a>
-        </li>
-      </ul>
-      <div style="height: 40px; padding: 6px 0 6px; 0"><a class="text-dark p-6">Iniciar Sesion</a></div>
-      <div class="text-center">
-        <a href="" class="btn btn-dark btn-rounded" data-toggle="modal" data-target="#modalLRForm">
-          Crear Cuenta</a>
-      </div>
-    </div>
-  </nav>
-
-  <!--Modal: Inicio de Sesion / Formulario de registro-->
-  <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog cascading-modal mt-6" role="document">
-      <div class="modal-content">
-
-        <!--Modal cascading tabs-->
-        <div class="modal-c-tabs">
-          <ul class="nav nav-tabs md-tabs tabs-2 warning-color darken-3 text-center p-2"
-            style="height: 60px; border-radius: 5px;" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" style="border-radius: 5px;" data-toggle="tab" href="#panel7" role="tab"><i
-                  class="fas fa-user mr-1"></i>
-                Iniciar Sesion</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="#">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" style="border-radius: 5px;" href="#panel8" role="tab"><i
-                  class="fas fa-user-plus mr-1"></i>
+                <a class="nav-link" href="productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Galeria</a>
+            </li>
+        </ul>
+        <div style="height: 40px; padding: 6px 0 6px;"><a data-toggle="modal" id="btnIniciarSesion"
+                                                          data-target="#modalLRForm" class="text-dark p-6">Iniciar
+            Sesion</a></div>
+        <div class="text-center">
+            <a href="" class="btn btn-dark btn-rounded" id="btnCrearCuenta" data-toggle="modal"
+               data-target="#modalLRForm">
                 Crear Cuenta</a>
-            </li>
-          </ul>
-
-          <!-- Tab panels -->
-          <div class="tab-content">
-            <!--Panel 7-->
-            <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-
-              <!--Body-->
-              <div class="modal-body mb-1">
-                <div class="md-form form-sm mb-3">
-                  <i class="fas fa-envelope prefix"></i>
-                  <input type="email" id="modalLRInput10" class="form-control form-control-sm validate mb-4">
-                  <label data-error="wrong" data-success="right" for="modalLRInput10">Correo Electronico</label>
-                </div>
-
-                <div class="md-form form-sm mb-3 mt-0">
-                  <i class="fas fa-lock prefix"></i>
-                  <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
-                  <label data-error="wrong" data-success="right" for="modalLRInput11">Contraseña</label>
-                </div>
-                <div class="text-center mt-2">
-                  <button class="btn btn-dark">Iniciar Sesion<i class="fas fa-sign-in ml-1"></i></button>
-                </div>
-              </div>
-              <!--Footer-->
-              <div class="modal-footer">
-                <div class="options text-center text-md-right mt-1">
-                  <p>¿No tienes cuenta? <a href="#" class="orange-text">Crea una</a></p>
-                </div>
-                <button type="button" class="btn btn-outline-dark waves-effect ml-auto"
-                  data-dismiss="modal">Cerrar</button>
-              </div>
-
-            </div>
-            <!--/.Panel 7-->
-
-            <!--Panel 8-->
-            <div class="tab-pane fade" id="panel8" role="tabpanel">
-
-              <!--Body-->
-              <div class="modal-body">
-                <div class="md-form form-sm mb-3">
-                  <i class="fas fa-user prefix"></i>
-                  <input type="text" id="modalLRInput12" class="form-control form-control-sm validate  mb-4">
-                  <label data-error="wrong" data-success="right" for="modalLRInput12">Nombre y apellido</label>
-                </div>
-
-                <div class="md-form form-sm mb-3">
-                  <i class="fas fa-envelope prefix"></i>
-                  <input type="email" id="modalLRInput12" class="form-control form-control-sm validate  mb-4">
-                  <label data-error="wrong" data-success="right" for="modalLRInput12">Correo Electronico</label>
-                </div>
-
-                <div class="md-form form-sm mb-3">
-                  <i class="fas fa-lock prefix"></i>
-                  <input type="password" id="modalLRInput13" class="form-control form-control-sm validate  mb-4">
-                  <label data-error="wrong" data-success="right" for="modalLRInput13">Contraseña</label>
-                </div>
-
-                <div class="md-form form-sm mb-3">
-                  <i class="fas fa-lock prefix"></i>
-                  <input type="password" id="modalLRInput14" class="form-control form-control-sm validate  mb-4">
-                  <label data-error="wrong" data-success="right" for="modalLRInput14">Repita contraseña</label>
-                </div>
-
-                <div class="text-center form-sm mt-2">
-                  <button class="btn btn-dark">Crear cuenta<i class="fas fa-sign-in ml-1"></i></button>
-                </div>
-
-              </div>
-              <!--Footer-->
-              <div class="modal-footer">
-                <div class="options text-right">
-                  <p class="pt-1">¿Ya tienes una cuenta? <a href="#" class="orange-text">Inicia Sesion</a></p>
-                </div>
-                <button type="button" class="btn btn-outline-dark waves-effect ml-auto"
-                  data-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-            <!--/.Panel 8-->
-          </div>
-
         </div>
-      </div>
-      <!--/.Content-->
     </div>
-  </div>
-  <!--Modal: Login / Register Form-->
+</nav>
+
+<!--Modal: Inicio de Sesion / Formulario de registro-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog cascading-modal mt-6" role="document">
+        <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+                <ul class="nav nav-tabs md-tabs tabs-2 warning-color darken-3 text-center p-2"
+                    style="height: 60px; border-radius: 5px;" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="iniciarSesionTab" style="border-radius: 5px;" data-toggle="tab"
+                           href="#panel7"
+                           role="tab"><i
+                                class="fas fa-user mr-1"></i>
+                            Iniciar Sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="crearCuentaTab" data-toggle="tab" style="border-radius: 5px;"
+                           href="#panel8" role="tab"><i
+                                class="fas fa-user-plus mr-1"></i>
+                            Crear Cuenta</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade" id="panel7" role="tabpanel">
+
+                        <!--Body-->
+                        <form id="formIniciarSesion">
+                            <div class="modal-body mb-1">
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-envelope prefix"></i>
+                                    <input type="email" id="modalLRInput10"
+                                           class="form-control form-control-sm validate mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput10">Correo
+                                        Electronico</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-3 mt-0">
+                                    <i class="fas fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput11"
+                                           class="form-control form-control-sm validate">
+                                    <label data-error="" data-success="" for="modalLRInput11">Contraseña</label>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button id="btnIniciarSesionUsuario" type="button" class="btn btn-dark">Iniciar Sesion<i
+                                            class="fas fa-sign-in ml-1"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-center text-md-right mt-1">
+                                <p>¿No tienes cuenta? <a id="creaCuentaHref" class="orange-text">Crea una</a></p>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark waves-effect ml-auto"
+                                    data-dismiss="modal">Cerrar
+                            </button>
+                        </div>
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                    <!--Panel 8-->
+                    <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                        <!--Body-->
+                        <form class="needs-validation" id="formRegistro" novalidate>
+                            <div class="modal-body">
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-user prefix"></i>
+                                    <input type="text" id="modalLRInput12" required
+                                           class="form-control  form-control-sm validate mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput12">Nombre y
+                                        apellido</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-envelope prefix"></i>
+                                    <input type="email" id="modalLRInput13" required
+                                           class="form-control form-control-sm validate  mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput13">Correo
+                                        Electronico</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput14"
+                                           class="form-control form-control-sm validate  mb-4">
+                                    <label data-error="" data-success=""
+                                           for="modalLRInput14">Contraseña</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput15"
+                                           class="form-control form-control-sm validate  mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput15">Repita
+                                        contraseña</label>
+                                </div>
+
+                                <div class="text-center form-sm mt-2">
+                                    <button type="submit" class="btn btn-dark">Crear cuenta<i
+                                            class="fas fa-sign-in ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-right">
+                                <p class="pt-1">¿Ya tienes una cuenta? <a id="iniciaSesionHref" class="orange-text">Inicia
+                                    Sesion</a>
+                                </p>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark waves-effect ml-auto"
+                                    data-dismiss="modal">Cerrar
+                            </button>
+                        </div>
+                    </div>
+                    <!--/.Panel 8-->
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Login / Register Form-->
 
 
-  <div class="content">
+<div class="content">
     <div class="Fixed-bottom negro text-center">
       <img src="img/portada1.png" class="img-fluid w-100" alt="Smiley face Responsive image">
     </div>
-  </div>
+</div>
 
   <div class="container mt-5 mb-5">
     <div class="card-deck">
@@ -190,8 +221,8 @@
           </ul>
         </div>
 
-      </div>
-      <!-- Card -->
+        </div>
+        <!-- Card -->
 
       <!-- Card -->
       <div class="card">
@@ -220,8 +251,8 @@
           </ul>
         </div>
 
-      </div>
-      <!-- Card -->
+        </div>
+        <!-- Card -->
 
       <!-- Card -->
       <div class="card">
@@ -259,8 +290,8 @@
 
 
 
-  <!-- Footer -->
-  <footer class="page-footer Fixed-bottom  font-small elegant-color-dark">
+<!-- Footer -->
+<footer class="page-footer Fixed-bottom  font-small elegant-color-dark">
 
     <div style="background-color: #343434;">
       <div class="container">
@@ -322,41 +353,41 @@
           </p>
         </div>
 
-        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
-          <h6 class="text-uppercase amber-text font-weight-bold">Contactos</h6>
-          <hr class="blue accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>
-            <i class="fas fa-home mr-3"></i> Santiago, Bandera 8976, Chile</p>
-          <p>
-            <i class="fas fa-envelope mr-3"></i> info@retrobits.com</p>
-          <p>
-            <i class="fas fa-phone mr-3"></i> +569 98877667</p>
-          <p>
-            <i class="fas fa-print mr-3"></i> +569 98877667</p>
-        </div>
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase amber-text font-weight-bold">Contactos</h6>
+                <hr class="blue accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fas fa-home mr-3"></i> Santiago, Bandera 8976, Chile</p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> info@retrobits.com</p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> +569 98877667</p>
+                <p>
+                    <i class="fas fa-print mr-3"></i> +569 98877667</p>
+            </div>
 
-      </div>
+        </div>
     </div>
     <!-- Footer Links -->
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="">RetroBits</a>
+        <a href="">RetroBits</a>
     </div>
     <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+</footer>
+<!-- Footer -->
 
 
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 
 </html>
