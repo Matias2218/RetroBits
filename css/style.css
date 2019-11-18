@@ -26,10 +26,38 @@
     background: #000;
 }
 
-.gradients-productos{
-background: #8e9eab;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.nav-tabs .nav-item .nav-link.active{
+    background-color: rgba(255,255,255,0.2);
+    border-color: transparent;
+    color: black;
 }
 
+.nav-tabs .nav-item .nav-link{
+    color: rgba(0,0,0,0.5);
+}
 
+.nav-tabs .nav-item .nav-link:hover{
+    border-color: transparent;
+}
+
+.md-form .fas.active {
+    color: #ffc107;
+}
+
+.md-form input[type="email"]:focus:not([readonly]), .md-form input[type="password"]:focus:not([readonly]), .md-form input[type="text"]:focus:not([readonly]){
+    box-shadow: 0 1px 0 0 #ffc107;
+    border-bottom: 1px solid #ffc107;
+}
+
+.md-form input[type="email"]:focus:not([readonly]) +label, .md-form input[type="password"]:focus:not([readonly])+label, .md-form input[type="text"]:focus:not([readonly])+label{
+    color: #cc9900;
+}
+
+.mt-6{
+    margin-top: 5rem !important;
+}
+
+.p-6{
+    padding: 6px 6px 6px 6px !important;
+    height: 40px;
+}
