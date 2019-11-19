@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Carrito de compras</title>
+    <link rel="shortcut icon" href="img/mago.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5">
+        <a class="navbar-brand pl-2" href="index.html"><img src="img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Galeria</a>
+                </li>
+            </ul>
+            <div style="height: 40px; padding: 6px 0 6px;"><a class="text-dark p-6">Iniciar Sesion</a></div>
+            <div class="text-center">
+                <a href="" class="btn btn-dark btn-rounded" data-toggle="modal" data-target="#modalLRForm">
+                    Crear Cuenta</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container pt-5 mb-5">
+        <div class="row">
+            <div class="col-6">
+                <div class="border border-light p-5 h-100">
+                    <h5 class="h5 mb-0">Mi Carrito</h5>
+                    <hr>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/nintendones.png" class="w-100 img-thumbnail">
+                        </div>
+                        <div class="col-4">
+                            <p class="mb-0">Nintendo Nes</p>
+
+                            <p class="mb-0">Cantidad: 1</p>
+                            <a class="mb-0"><small><i class="far fa-trash-alt fa-1x text-dark"></i> Eliminar</small></a>
+                        </div>
+                        <div class="col-4">
+                            <p class="light-blue-text text-right mb-0">
+                                <strong>$ 25.000</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="text-center border border-light p-5">
+                    <h5 class="h5 mb-0">Total</h5>
+                    <hr>
+                    <table class="table mb-5 table-borderless">
+                        <tr>
+                            <td class="text-left py-0">
+                                <p>Nintendo Nes</p>
+                            </td>
+                            <td class="text-right py-0">
+                                <h6 class="h6 mb-0">
+                                    <p>$ 25.000</p>
+                                </h6>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <label><small>¿Tienes un código promocional?</small></label>
+                    <div class="form-row mb-3">
+                        <div class="col">
+
+                            <input type="text" id="txtCupon" class="form-control" placeholder="Ingresalo aquí">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-warning text-dark btn-block btn-sm h-100">Cupon</button>
+                        </div>
+                    </div>
+                    <table class="table mb-3 table-borderless">
+                        <tr>
+                            <td class="text-left py-0">
+                                <h4 class="h4 mb-0">TOTAL</h4>
+                            </td>
+                            <td class="text-right py-0">
+                                <h4 class="h4 mb-0">$ 25.000</h4>
+                            </td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-dark btn-block" onclick="window.location='detallePago.html';">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="page-footer Fixed-bottom  font-small elegant-color-dark">
+        <div style="background-color: #343434;">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-md-6 col-lg-6 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">¡Contectata con nosotros a traves de las redes sociales!</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-6 text-center text-md-right">
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container  text-center text-md-left mt-5 mb-4">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase amber-text font-weight-bold">Nosotros</h6>
+                    <hr class="blue accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <img src="img/logo-white.jpg" class="img w-100 mb-3">
+                    <p>Empresa de restauración y venta de video
+                        juegos y consolas consideradas retro</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase amber-text font-weight-bold">Productos</h6>
+                    <hr class="blue accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">VideoConsolas</a>
+                    </p>
+                    <p>
+                        <a href="#!">VideoJuegos</a>
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase amber-text font-weight-bold">Servicios</h6>
+                    <hr class="blue accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Reparaciones</a>
+                    </p>
+                    <p>
+                        <a href="#!">Venta</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase amber-text font-weight-bold">Contactos</h6>
+                    <hr class="blue accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Santiago, Bandera 8976, Chile</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@retrobits.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> +569 98877667</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> +569 98877667</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="">RetroBits</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
