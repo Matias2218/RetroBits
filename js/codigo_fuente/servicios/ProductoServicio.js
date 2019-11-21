@@ -1,17 +1,29 @@
 import {Producto} from '../clases/Producto.js';
 
-const productos = [new Producto(1, 'Super Nintendo', 'Consola', 'Consola Super Nintendo Original - 2 controladores Alternativos - Fuente de alimentación - Conexión A / V Original', 50000, 'img/supern.png'),
-                   new Producto(2, 'Atari 2600', 'Consola', 'La consola ATARI 2600 con 2 mandos con cable', 5000, 'img/atari.png'),
-                   new Producto(3, 'Super Mario World', 'VideoJuego Retro', 'Primer videojuego creado para acompañar el estreno de Super Nintendo Entertainment System para Japón, Europa y América del Norte.', 28000, 'img/SNES-Super-Mario-World.jpg')];
+const productos = [new Producto(1, 'NINTENDO NES', "Consola / VideoJuegos", "NES, la aclamada consola de Nintendo, lanzada en 1985, original y con todos sus accesorios.\n" +
+    "\n" +
+    "Solo tienes que conectar la consola NES a tu televisor, agarrar el control clásico y redescubrir el encanto de los juegos de NES.", 25000, ["img/nintendones.png", "img/supermario.png", "img/mariobros.png"], 0),
+    new Producto(2, "ATARI 2600", "Consola", "Consola Atari 2600 reparada, con un control y cableado original.", 35000, ["img/atari2600.png"], 0),
+    new Producto(3, "Crash Bandicoot 4", "VideoJuego", "Crash Bandicoot 4: La venganza de Cortex para GameCube", 35000, ["img/crash.png"], 0),
+    new Producto(4, "Control PlayStation 1", "Control", "Control PlayStation 1 rojo, SCPH-1080. Control original.", 35000, ["img/controller.png"], 0),
+    new Producto(5, "Dreamcast", "Consola", "Consola Dreamcast incluye un control más cableado original. ", 35000, ["img/dreamcast.png"], 0),
+    new Producto(6, "Nintendo 64", "Consola", "Consola Nintendo 64 original nueva, caja cerrada.", 35000, ["img/nintendo64.png"], 0),
 
-document.addEventListener('DOMContentLoaded', () => {
-    let body = document.getElementsByTagName("body")[0];
+];
 
-    productos.forEach((producto)=>
-    {
-        body.append(producto.nombre);
-    });
+document.addEventListener("DOMContentLoaded", () => {
 });
 
-
+var detallesRef = document.querySelectorAll("a[name='detalleHref']");
+for (let i = 0; i < detallesRef.length; i++) {
+    detallesRef[i].addEventListener("click", (e) => {
+        const idProducto = e.target.parentElement.children[1].value;
+        for (let i = 0; i < productos.length; i++) {
+            if (productos[i].id == idProducto) {
+                sessionStorage.setItem("productoDetalle", JSON.stringify(productos[i]));
+                window.location.href = "detalleProducto.html";
+            }
+        }
+    });
+}
 

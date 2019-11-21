@@ -1,6 +1,15 @@
 import {Usuario} from '../clases/Usuario.js';
 
+function load(url, element)
+{
+    let req = new XMLHttpRequest();
+    req.open("GET", url, false);
+    req.send(null);
+    element.innerHTML = req.responseText;
+}
+
 document.addEventListener('DOMContentLoaded', ()=> {
+    load("modales.html", document.getElementById('modales'));
     const divsIniciarCrearCuenta = "\n" +
         "        <ul class=\"navbar-nav mr-auto\">\n" +
         "            <li class=\"nav-item \">\n" +
@@ -19,6 +28,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
         "            <a href=\"\" class=\"btn btn-dark btn-rounded\" id=\"btnCrearCuenta\" data-toggle=\"modal\"\n" +
         "               data-target=\"#modalLRForm\">\n" +
         "                Crear Cuenta</a>\n" +
+        "        </div> " +
+        "        <div>" +
+        "         <a><i\n" +
+        "                        class=\"fas fa-shopping-cart ml-3\" data-toggle=\"modal\" data-target=\"#modalPoll-1\"></i></a>   "+
         "        </div>";
     if(sessionStorage.getItem('usuarioLogeado') === null)
     {
@@ -37,6 +50,21 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         document.getElementById('creaCuentaHref').addEventListener('click', ()=>{
             activarIniciarSesion();
+        });
+        document.getElementById('btnIniciarSesionUsuario').addEventListener('click', ()=>{
+            const correo = document.getElementById('modalLRInput10').value;
+            const contra = document.getElementById('modalLRInput11').value;
+            const usuarios = JSON.parse(sessionStorage.getItem('usuarios'));
+
+            usuarios.forEach((usuario)=>{
+                if(correo === usuario.correo && contra === usuario.contraseña)
+                {
+                    console.log('Si puedo logear');
+                    sessionStorage.setItem("usuarioLogeado",JSON.stringify(usuario));
+                    window.location.href = "productos.html";
+                }
+            });
+            console.log('No puede logear');
         });
     }
     else {
@@ -87,21 +115,7 @@ function activarCrearCuenta()
     document.getElementById('panel7').classList.add('in','show','active');
     document.getElementById('panel8').classList.remove('in','show','active');
 }
-document.getElementById('btnIniciarSesionUsuario').addEventListener('click', ()=>{
-   const correo = document.getElementById('modalLRInput10').value;
-   const contra = document.getElementById('modalLRInput11').value;
-   const usuarios = JSON.parse(sessionStorage.getItem('usuarios'));
 
-   usuarios.forEach((usuario)=>{
-       if(correo === usuario.correo && contra === usuario.contraseña)
-       {
-           console.log('Si puedo logear');
-           sessionStorage.setItem("usuarioLogeado",JSON.stringify(usuario));
-           window.location.href = "productos.html";
-       }
-   });
-   console.log('No puede logear');
-});
 
 
 
