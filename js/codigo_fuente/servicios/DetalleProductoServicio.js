@@ -77,7 +77,7 @@ const imprimerDetalleProducto = (producto) => {
                 <p>${producto.descripcion}</p>
                 <p>Precio: $${producto.precio}</p>
 
-                <button type="button" class="btn btn-dark mt-4" data-toggle="modal" data-target="#modalPoll-1"><i
+                <button type="button" id="btnAgregarAlCarrito" class="btn btn-dark mt-4" data-toggle="modal" data-target="#modalPoll-1"><i
                         class="fas fa-shopping-cart"></i> Añadir al carrito</button>`;
     document.getElementById("detalleProducto").innerHTML = html;
 }

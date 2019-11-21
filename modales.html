@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Modal: Inicio de Sesion / Formulario de registro-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog cascading-modal mt-6" role="document">
+        <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+                <ul class="nav nav-tabs md-tabs tabs-2 warning-color darken-3 text-center p-2"
+                    style="height: 60px; border-radius: 5px;" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="iniciarSesionTab" style="border-radius: 5px;" data-toggle="tab" href="#panel7"
+                           role="tab"><i class="fas fa-user mr-1"></i>
+                            Iniciar Sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="crearCuentaTab" data-toggle="tab" style="border-radius: 5px;" href="#panel8"
+                           role="tab"><i class="fas fa-user-plus mr-1"></i>
+                            Crear Cuenta</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade" id="panel7" role="tabpanel">
+
+                        <!--Body-->
+                        <form id="formIniciarSesion">
+                            <div class="modal-body mb-1">
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-envelope prefix"></i>
+                                    <input type="email" id="modalLRInput10" class="form-control form-control-sm validate mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput10">Correo
+                                        Electronico</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-3 mt-0">
+                                    <i class="fas fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                                    <label data-error="" data-success="" for="modalLRInput11">Contraseña</label>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button id="btnIniciarSesionUsuario" type="button" class="btn btn-dark">Iniciar Sesion<i
+                                            class="fas fa-sign-in ml-1"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-center text-md-right mt-1">
+                                <p>¿No tienes cuenta? <a id="creaCuentaHref" class="orange-text">Crea una</a></p>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark waves-effect ml-auto" data-dismiss="modal">Cerrar
+                            </button>
+                        </div>
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                    <!--Panel 8-->
+                    <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                        <!--Body-->
+                        <form class="needs-validation" id="formRegistro" novalidate>
+                            <div class="modal-body">
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-user prefix"></i>
+                                    <input type="text" id="modalLRInput12" required class="form-control  form-control-sm validate mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput12">Nombre y
+                                        apellido</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-envelope prefix"></i>
+                                    <input type="email" id="modalLRInput13" required
+                                           class="form-control form-control-sm validate  mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput13">Correo
+                                        Electronico</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput14" class="form-control form-control-sm validate  mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput14">Contraseña</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-3">
+                                    <i class="fas fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput15" class="form-control form-control-sm validate  mb-4">
+                                    <label data-error="" data-success="" for="modalLRInput15">Repita
+                                        contraseña</label>
+                                </div>
+
+                                <div class="text-center form-sm mt-2">
+                                    <button type="submit" class="btn btn-dark">Crear cuenta<i class="fas fa-sign-in ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-right">
+                                <p class="pt-1">¿Ya tienes una cuenta? <a id="iniciaSesionHref" class="orange-text">Inicia
+                                    Sesion</a>
+                                </p>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark waves-effect ml-auto" data-dismiss="modal">Cerrar
+                            </button>
+                        </div>
+                    </div>
+                    <!--/.Panel 8-->
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!-- Modal: modalPoll -->
+<div class="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-right modal-notify modal-warning" role="document">
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header" style="background-color: #343434;">
+                <p class="heading lead"><i class="fas fa-shopping-cart fa-1x mr-2"></i>Carrito de compra</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">×</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <!--<div class="row">
+                    <div class="col-4">
+                        <img src="img/nintendones.png" class="w-100 img-thumbnail">
+                    </div>
+                    <div class="col-8">
+                        <p class="mb-0">Nintendo Nes</p>
+                        <p class="light-blue-text mb-0">
+                            <strong>$ 25.000</strong>
+                        </p>
+                        <p class="mb-0">Cantidad: 1</p>
+                        <a class="mb-0"><small><i class="far fa-trash-alt fa-1x text-dark"></i> Eliminar</small></a>
+                    </div>
+                </div>-->
+               <!-- <hr class="mt-4 mb-4">-->
+            </div>
+         <!--   <div class="modal-footer grey lighten-2">
+                <table class="table mb-0 table-borderless">
+                    <tr>
+                        <td class="py-0">Total</td>
+                        <td class="text-right py-0">
+                            <h6 class="h6 mb-0">$ 25.000</h6>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>-->
+            <!--Footer-->
+            <div class="modal-footer p-0">
+                <div class="btn-group w-100" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-warning text-dark" onclick="window.location='carrito.html';">Ver carrito</button>
+                    <button type="button" class="btn btn-dark" onclick="window.location='detallePago.html';">Comprar <i class="fa fa-truck ml-1"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal: modalPoll -->
+</body>
+</html>
