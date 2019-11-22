@@ -9,7 +9,7 @@ function load(url, element) {
 
 window.addEventListener("load", () => {
     cargarCarrito();
-    if (window.location.pathname == "/RetroBits/carrito.html") {
+    if (window.location.pathname.toUpperCase() == "/RetroBits/carrito.html".toUpperCase()) {
         cargarVistaCarrito();
     }
 });
@@ -202,7 +202,7 @@ function cargarCarrito() {
                 const btnComprar = document.getElementById("btnComprar");
                 btnComprar.setAttribute("disabled", "true");
             }
-            if (window.location.pathname == "/RetroBits/carrito.html") {
+            if (window.location.pathname.toUpperCase() == "/RetroBits/carrito.html".toUpperCase()) {
                 cargarVistaCarrito();
             }
         });
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sessionStorage.removeItem('usuarioLogeado');
             window.location.href = document.URL;
         });
-        if(window.location.pathname === "/RetroBits/detallePago.html")
+        if(window.location.pathname.toUpperCase() === "/RetroBits/detallePago.html".toUpperCase())
         {
             document.getElementById("txtnombre").setAttribute("value", nombre);
             document.getElementById("txtnombre").setAttribute("disabled", "true");

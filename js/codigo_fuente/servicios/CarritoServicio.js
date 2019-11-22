@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    if (window.location.pathname == "/RetroBits/carrito.html") {
+    if (window.location.pathname.toUpperCase() == "/RetroBits/carrito.html".toUpperCase()) {
     } else {
         agregarAlCarrito();
     }
