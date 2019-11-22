@@ -7,7 +7,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Detalle Nintendo Nes</title>
     <link rel="shortcut icon" href="img/mago.png" />
+    <script src="js/push.min.js">
+    </script>
     <script src="js/codigo_fuente/servicios/DetalleProductoServicio.js"></script>
+    <script src="js/codigo_fuente/servicios/CarritoServicio.js"></script>
     <script type="module" src="js/codigo_fuente/servicios/UsuarioServicio.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -19,7 +22,8 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<div id="modales"></div>
+<div id="modales">
+</div>
     <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5">
         <a class="navbar-brand pl-2" href="index.html"><img src="img/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -32,7 +36,7 @@
 
     <div class="container mt-5 mb-4">
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6">
                 <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
                     <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -44,7 +48,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-6" id="detalleProducto">
+            <div class="col-sm-6" id="detalleProducto">
 
             </div>
         </div>

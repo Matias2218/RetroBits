@@ -7,6 +7,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Carrito de compras</title>
     <link rel="shortcut icon" href="img/mago.png" />
+    <script src="js/push.min.js">
+    </script>
+    <script type="module" src="js/codigo_fuente/servicios/UsuarioServicio.js"></script>
+    <script src="js/codigo_fuente/servicios/CompraServicio.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -15,9 +19,13 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <script>
+
+    </script>
 </head>
 
 <body>
+<div id="modales"></div>
     <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5">
         <a class="navbar-brand pl-2" href="index.html"><img src="img/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -25,22 +33,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="basicExampleNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Galeria</a>
-                </li>
-            </ul>
-            <div style="height: 40px; padding: 6px 0 6px;"><a class="text-dark p-6">Iniciar Sesion</a></div>
-            <div class="text-center">
-                <a href="" class="btn btn-dark btn-rounded" data-toggle="modal" data-target="#modalLRForm">
-                    Crear Cuenta</a>
-            </div>
         </div>
     </nav>
 
@@ -53,10 +45,8 @@
                     <div class="row">
                         <div class="col-8">
                             <h6 class="h6 mb-0">Compra N°091932</h6>
-
                             <p class="mb-0">Estado: <strong>Preparando para el envío</strong></p>
-                            <p class="mb-0">Total de la compra: $25.000</p>
-
+                            <p class="mb-0" id="totalVenta">Total de la compra: $25.000</p>
                         </div>
                         <div class="col-4 text-right">
                             <a class="light-blue-text text-right mb-0">

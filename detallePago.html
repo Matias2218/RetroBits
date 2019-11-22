@@ -7,6 +7,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Detalle de compras</title>
     <link rel="shortcut icon" href="img/mago.png" />
+    <script src="js/push.min.js">
+    </script>
+    <script type="module" src="js/codigo_fuente/servicios/UsuarioServicio.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -18,6 +21,7 @@
 </head>
 
 <body>
+    <div id="modales"></div>
     <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5">
         <a class="navbar-brand pl-2" href="index.html"><img src="img/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -25,73 +29,56 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="basicExampleNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Galeria</a>
-                </li>
-            </ul>
-            <div style="height: 40px; padding: 6px 0 6px;"><a class="text-dark p-6">Iniciar Sesion</a></div>
-            <div class="text-center">
-                <a href="" class="btn btn-dark btn-rounded" data-toggle="modal" data-target="#modalLRForm">
-                    Crear Cuenta</a>
-            </div>
         </div>
     </nav>
-
+    <form class="needs-validatio" novalidate>
     <div class="container pt-5 mb-">
         <h3 class="h3 text-center mb-3  text-uppercase">Datos para la compra</h3>
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6">
                 <div class="text-center border border-light p-5 h-100">
                     <p class="h4 mb-4">Datos personales</p>
-                    <input type="text" id="txtnombre" class="form-control mb-4" placeholder="Nombre y Apellido">
+                    <input type="text" id="txtnombre" class="form-control mb-4" required placeholder="Nombre y Apellido">
                     <div class="form-row mb-4">
                         <div class="col">
-                            <input type="text" id="txtRut" class="form-control" placeholder="RUT">
+                            <input type="text" id="txtRut" class="form-control"  required placeholder="RUT">
                         </div>
                         <div class="col">
-                            <input type="text" id="txtTelefono" class="form-control" placeholder="Telefono">
+                            <input type="text" id="txtTelefono" class="form-control" required placeholder="Telefono">
                         </div>
                     </div>
-                    <input type="email" id="txtEmail" class="form-control mb-4" placeholder="E-mail">
+                    <input type="email" id="txtEmail" class="form-control mb-4"  required placeholder="E-mail">
                     <div class="form-row mb-4">
                         <div class="col">
-                            <input type="text" id="txtRegion" class="form-control" placeholder="Región">
+                            <input type="text" id="txtRegion" class="form-control" required placeholder="Región">
                         </div>
                         <div class="col">
-                            <input type="text" id="txtComuna" class="form-control" placeholder="Comuna">
+                            <input type="text" id="txtComuna" class="form-control" required placeholder="Comuna">
                         </div>
                     </div>
-                    <input type="text" id="txtDireccion" class="form-control mb-4" placeholder="Dirección">
+                    <input type="text" id="txtDireccion" class="form-control mb-4" required placeholder="Dirección">
                 </div>
             </div>
-
-            <div class="col-6">
+            <div class="col-sm-6">
                 <div class="text-center border border-light p-5">
                     <p class="h4 mb-4">Datos de pago</p>
                     <div class="custom-control custom-checkbox text-left">
-                        <input type="checkbox" class="custom-control-input" id="checkbox1">
-                        <label class="custom-control-label" for="checkbox">Tarjeta de Credito</label>
+                        <input type="radio" class="custom-control-input" id="radio1" name="rb" checked>
+                        <label class="custom-control-label" for="radio1">Tarjeta de Credito</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4 text-left">
-                        <input type="checkbox" class="custom-control-input" id="checkbox1">
-                        <label class="custom-control-label" for="checkbox">Tarjeta de Debito</label>
+                        <input type="radio" class="custom-control-input" id="radio2" name="rb">
+                        <label class="custom-control-label" for="radio2">Tarjeta de Debito</label>
                     </div>
 
-                    <input type="text" id="txtRutTarjeta" class="form-control mb-4" placeholder="RUT">
-                    <input type="text" id="txtNumeroTarjeta" class="form-control mb-4" placeholder="Número de tarjeta">
+                    <input type="text" id="txtRutTarjeta" required class="form-control mb-4" placeholder="RUT">
+                    <input type="text" id="txtNumeroTarjeta" required class="form-control mb-4" placeholder="Número de tarjeta">
 
                     <hr>
 
                     <label for="txtnombreRetiro">Si no se encuentra el titular, recibe el producto:</label>
-                    <input type="text" id="txtnombreRetiro" class="form-control mb-4" placeholder="Nombre y Apellido">
-                    <input type="text" id="txtRutRetiro" class="form-control" placeholder="RUT">
+                    <input type="text" id="txtnombreRetiro" required class="form-control mb-4" placeholder="Nombre y Apellido">
+                    <input type="text" id="txtRutRetiro" required class="form-control" placeholder="RUT">
                 </div>
             </div>
         </div>
@@ -103,8 +90,9 @@
             <a href="" target="_blank">terminos y servicios</a>
         </p>
 
-        <button class="btn btn-dark btn-block mb-5" value="Comprar" onclick="window.location='compras.html';">Comprar</button>
+        <button class="btn btn-dark btn-block mb-5" type="submit" value="Comprar">Comprar</button>
     </div>
+    </form>
 
     <!-- Footer -->
     <footer class="page-footer Fixed-bottom  font-small elegant-color-dark">
